@@ -68,17 +68,7 @@ public class Projects {
         this.no_of_years = no_of_years;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "firstName='" + id + '\'' +
-                ", lastName='" + description + '\'' +
-                ", age=" + projectname +
-                '}';
-    }
-
-
-    public void setNo_of_months(Integer no_of_months) {
+   public void setNo_of_months(Integer no_of_months) {
         this.no_of_months = no_of_months;
     }
 
