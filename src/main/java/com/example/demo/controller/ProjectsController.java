@@ -26,15 +26,7 @@ public class ProjectsController {
     }
 
     @GetMapping
-    // public Iterable<Projects> getAllProjects() {
-    //     return this.project.findAll();
-    // }
-
-    // public List<Projects> getAllUsers() {
-    //     // CrudRepository.findAll() returns Iterable, convert it to a List if needed
-    //     return (List<Projects>) project.findAll();
-    // }
- public ResponseEntity<?> getAll() {
+    public ResponseEntity<?> getAll() {
 		List<Projects> result = (List<Projects>) project.findAll();
 		return new ResponseEntity(result, HttpStatus.OK);
 	}
