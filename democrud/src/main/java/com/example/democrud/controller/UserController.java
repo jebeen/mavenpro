@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 
     private final UserRepository repo;
@@ -31,6 +31,8 @@ public class UserController {
         return repo.findById(id).orElseThrow();
     }
 
+    // Updating User
+    
     @PutMapping("/{id}")
     public User update(@PathVariable Long id, @RequestBody User u) {
         User user = repo.findById(id).orElseThrow();
