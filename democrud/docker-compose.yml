@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: bss
+      POSTGRES_USER: bssadmin
+      POSTGRES_PASSWORD: bssadmin
+    ports:
+      - "5433:5432"
+  app:
+    build: .
+    ports:
+      - "9080:8080"
+    depends_on:
+      - db
