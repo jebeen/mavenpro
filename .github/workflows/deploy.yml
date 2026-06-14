@@ -48,4 +48,4 @@ jobs:
             docker image prune -af
         env:
           IMAGE_TAG: ${{ inputs.image_tag }}
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
